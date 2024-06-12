@@ -96,5 +96,6 @@ To watch the BSE tutorial on how to create a portfolio, click here.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/f4P4u2elmVI?si=ZLH9Rz3OYL4tvI35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
 My starter project is the Mini Arcade Console. It works by receiving input from buttons being pressed and using that to update the LED displays that make up the screen that shows the game. All of the components (ex. LED displays, buzzer, buttons) are soldered together and connected to a battery pack to provide power. The player can choose between a few different games, such as Tetris or Snake, and the system records the player's score. This project mainly taught me better soldering skills.
 
