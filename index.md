@@ -1,11 +1,11 @@
 # Keypad and Fingerprint Safe
 My project is a keypad and fingerprint ID safe. The box has a keypad and fingerprint scanner on it. After the person correctly puts in the password and fingerprint, the box will open and they will be able to retrieve their belongings. Otherwise, the box will remain locked.
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
+<!--- You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:-->
+<!--- ```HTML 
 <!--- This is an HTML comment in Markdown -->
 <!--- Anything between these symbols will not render on the published site -->
-```
+``` -->
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
