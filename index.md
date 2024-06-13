@@ -2,10 +2,7 @@
 My project is a keypad and fingerprint ID safe. The box has a keypad and fingerprint scanner on it. After the person correctly puts in the password and fingerprint, the box will open and they will be able to retrieve their belongings. Otherwise, the box will remain locked.
 
 <!--- You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:-->
-<!--- ```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-``` -->
+
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -14,7 +11,7 @@ My project is a keypad and fingerprint ID safe. The box has a keypad and fingerp
 <!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
 ![Headstone Image](logo.svg)
-  
+<!---  
 # Final Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
