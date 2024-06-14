@@ -1,14 +1,12 @@
 # Keypad and Fingerprint Safe
 My project is a keypad and fingerprint ID safe. The box has a keypad and fingerprint scanner on it. After the person correctly puts in the password and fingerprint, the box will open and they will be able to retrieve their belongings. Otherwise, the box will remain locked.
 
-<!--- You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:-->
-
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Grace W | Prospect High School | Mechanincal Engineering | Incoming Senior
 
-<!---**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
+**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
 ![Headstone Image](logo.svg)
 <!---  
