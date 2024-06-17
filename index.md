@@ -38,16 +38,10 @@ For your second milestone, explain what you've worked on since your previous mil
 - What needs to be completed before your final milestone -->
 
 # First Milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wYVMw6ThgyI?si=PYWWjNdsai_RXagc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+For my first milestone, I wired up the keypad and servo onto the arduino. I used C++ in Arduino IDE on my computer to upload code. I mapped the button "1" to make the servo move 180 degrees clockwise and "2" to make the servo move 180 degrees counterclockwise so that the servo would spin accordingly when the respective buttons on the keypad were pressed. I also made the computer print out the value of whatever button I pressed. Some challeges that I faced were how much the arduino could handle. At first, I had the servo just constantly spinning, which made the keypad stop working whenever the servo was active. It also kept forcing my computer to shut down. To fix this, I added a battery pack to provide more power so that the arduino wouldn't have to only draw power from the computer and made the servo only spin a set amount when a button was clicked.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
 <!---
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
@@ -92,9 +86,6 @@ One of the best parts about Github is that you can view how other people set up 
 To watch the BSE tutorial on how to create a portfolio, click here.
 -->
 # Starter Project
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/f4P4u2elmVI?si=ZLH9Rz3OYL4tvI35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 My starter project is the Mini Arcade Console. It works by receiving input from buttons being pressed and using that to update the LED displays that make up the screen that shows the game. All of the components (ex. LED displays, buzzer, buttons) are soldered together and connected to a battery pack to provide power. The player can choose between a few different games, such as Tetris or Snake, and the system records the player's score. This project mainly taught me better soldering skills.
