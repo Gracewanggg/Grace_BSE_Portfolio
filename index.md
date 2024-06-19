@@ -84,7 +84,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 - [Example 2](https://learn.adafruit.com/biometric-security-box/program-and-test)
 - [Example 3](https://www.hackster.io/Hack-star-Arduino/learn-to-use-lcd-1602-i2c-parallel-with-arduino-uno-f73f07)
 
-To watch the BSE tutorial on how to create a portfolio, click here.
+<!--- To watch the BSE tutorial on how to create a portfolio, click here.-->
 
 # Starter Project
 <iframe width="560" height="315" src="https://www.youtube.com/embed/f4P4u2elmVI?si=ZLH9Rz3OYL4tvI35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
