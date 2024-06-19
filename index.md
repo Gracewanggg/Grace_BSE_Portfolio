@@ -69,11 +69,11 @@ Don't forget to place the link of where to buy each component inside the quotati
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Arduino | Used to relay code to the devices attached to the arduino | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Wooden Box | Used as the main body of the safe to hold all of the components | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Wooden Box | Used as the main body of the safe to hold all of the components | $27.60 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Servo Motor | Used to lock the box | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Keypad | Used to input the values pressed by the user | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Fingerprint scanner | Used to scan the user's fingerprint | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| LCD display | Used to display the user's input and other messages | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Fingerprint scanner | Used to scan the user's fingerprint | $39.95 | <a href="https://www.adafruit.com/product/4651"> Link </a> |
+| LCD display | Used to display the user's input and other messages | $5.99 | <a href="https://www.elecbee.com/en-29832-IIC-I2C-1602-Blue-Backlight-LCD-Display-Screen-Module-for-Arduino-products-that-work-with-official-Arduino-boards?utm_term=&utm_campaign=shopping_%E7%BE%8E%E5%9B%BD2021/03/05&utm_source=adwords&utm_medium=ppc&hsa_acc=9958698819&hsa_cam=12473735731&hsa_grp=115457242501&hsa_ad=502747062194&hsa_src=g&hsa_tgt=pla-294682000766&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjwg8qzBhAoEiwAWagLrDYhfhUbbYnmmnm0Mdn34YCLbcvGuJFkkJEgVpdvvIMMb6UYsUD3EBoCIRcQAvD_BwE"> Link </a> |
 | Battery pack | Used to hold batteries | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Batteries | Used to power the safe | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 
