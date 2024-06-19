@@ -61,22 +61,22 @@ void loop() {
 
 }
 ```
-
+-->
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Arduino | Used to relay code to the devices attached to the arduino | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Wooden Box | Used as the main body of the safe to hold all of the components | $27.60 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Servo Motor | Used to lock the box | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Keypad | Used to input the values pressed by the user | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Arduino | Used to relay code to the devices attached to the arduino | $27.60 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Wooden Box | Used as the main body of the safe to hold all of the components | $17.88 | <a href="https://www.amazon.com/10-8x7x8x5-7-Inch-Unfinished-Project-Woodcraft-Keepsake/dp/B09TP79KMG/ref=asc_df_B09TP79KMG/?tag=hyprod-20&linkCode=df0&hvadid=693702993503&hvpos=&hvnetw=g&hvrand=7855882896698640904&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032171&hvtargid=pla-1656049679726&mcid=09c514aa5dc832cf9e480c008ff2ccf2&gad_source=1&th=1"> Link </a> |
+| Servo Motor | Used to lock the box | $13.99 | <a href="https://tinkersphere.com/motors-wheels/241-high-torque-continuous-rotation-servo-4kg.html"> Link </a> |
+| Keypad | Used to input the values pressed by the user | $4.95 | <a href= "https://www.digikey.com/en/products/detail/sparkfun-electronics/COM-14662/8702491?utm_adgroup=&utm_source=google&utm_medium=cpc&utm_campaign=PMax%20Shopping_Product_Low%20ROAS%20Categories&utm_term=&utm_content=&utm_id=go_cmp-20243063506_adg-_ad-__dev-c_ext-_prd-8702491_sig-CjwKCAjwg8qzBhAoEiwAWagLrBAjV71gNMRh6gSqnwGcmKKZgxfZONfA__3vwEc5cEfz6mZHZPNaxhoCMo0QAvD_BwE&gad_source=4&gclid=CjwKCAjwg8qzBhAoEiwAWagLrBAjV71gNMRh6gSqnwGcmKKZgxfZONfA__3vwEc5cEfz6mZHZPNaxhoCMo0QAvD_BwE"> Link </a> |
 | Fingerprint scanner | Used to scan the user's fingerprint | $39.95 | <a href="https://www.adafruit.com/product/4651"> Link </a> |
 | LCD display | Used to display the user's input and other messages | $5.99 | <a href="https://www.elecbee.com/en-29832-IIC-I2C-1602-Blue-Backlight-LCD-Display-Screen-Module-for-Arduino-products-that-work-with-official-Arduino-boards?utm_term=&utm_campaign=shopping_%E7%BE%8E%E5%9B%BD2021/03/05&utm_source=adwords&utm_medium=ppc&hsa_acc=9958698819&hsa_cam=12473735731&hsa_grp=115457242501&hsa_ad=502747062194&hsa_src=g&hsa_tgt=pla-294682000766&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjwg8qzBhAoEiwAWagLrDYhfhUbbYnmmnm0Mdn34YCLbcvGuJFkkJEgVpdvvIMMb6UYsUD3EBoCIRcQAvD_BwE"> Link </a> |
-| Battery pack | Used to hold batteries | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Batteries | Used to power the safe | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-
+| Battery pack | Used to hold batteries | $0.99 | <a href="https://www.aliexpress.us/item/2255800085048686.html?src=google&src=google&albch=shopping&acnt=708-803-3821&slnk=&plac=&mtctp=&albbt=Google_7_shopping&gclsrc=aw.ds&albagn=888888&isSmbAutoCall=false&needSmbHouyi=false&src=google&albch=shopping&acnt=708-803-3821&slnk=&plac=&mtctp=&albbt=Google_7_shopping&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=en2255800085048686&ds_e_product_merchant_id=109226772&ds_e_product_country=US&ds_e_product_language=en&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=19158444193&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=CjwKCAjwg8qzBhAoEiwAWagLrOpaej3k4efkp4YyWvfM8vmhTXSb_L1wvrkKTOeJnbjJjQ0pbtrG2xoCsD4QAvD_BwE&aff_fcid=c304c687bdc3452d9a6329fe3798d70d-1718824126454-00553-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=c304c687bdc3452d9a6329fe3798d70d-1718824126454-00553-UneMJZVf&terminal_id=404226348af640d894c68bcc06778bd1&afSmartRedirect=y&gatewayAdapt=glo2usa"> Link </a> |
+| Batteries | Used to power the safe | $14.89 | <a href="https://www.amazon.com/Coppertop-Batteries-Ingredients-Long-lasting-Household/dp/B002UXRXE6/ref=asc_df_B002UXRXE6/?tag=hyprod-20&linkCode=df0&hvadid=693464962511&hvpos=&hvnetw=g&hvrand=17727216277919997895&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032171&hvtargid=pla-638867480103&psc=1&mcid=c945774d225c355481b304e5f5b0a960&gad_source=1"> Link </a> |
+<!---
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
 - [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
