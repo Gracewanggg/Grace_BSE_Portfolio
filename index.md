@@ -77,15 +77,15 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Battery pack | Used to hold batteries | $0.99 | <a href="https://www.aliexpress.us/item/2255800085048686.html?src=google&src=google&albch=shopping&acnt=708-803-3821&slnk=&plac=&mtctp=&albbt=Google_7_shopping&gclsrc=aw.ds&albagn=888888&isSmbAutoCall=false&needSmbHouyi=false&src=google&albch=shopping&acnt=708-803-3821&slnk=&plac=&mtctp=&albbt=Google_7_shopping&gclsrc=aw.ds&albagn=888888&ds_e_adid=&ds_e_matchtype=&ds_e_device=c&ds_e_network=x&ds_e_product_group_id=&ds_e_product_id=en2255800085048686&ds_e_product_merchant_id=109226772&ds_e_product_country=US&ds_e_product_language=en&ds_e_product_channel=online&ds_e_product_store_id=&ds_url_v=2&albcp=19158444193&albag=&isSmbAutoCall=false&needSmbHouyi=false&gad_source=1&gclid=CjwKCAjwg8qzBhAoEiwAWagLrOpaej3k4efkp4YyWvfM8vmhTXSb_L1wvrkKTOeJnbjJjQ0pbtrG2xoCsD4QAvD_BwE&aff_fcid=c304c687bdc3452d9a6329fe3798d70d-1718824126454-00553-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=c304c687bdc3452d9a6329fe3798d70d-1718824126454-00553-UneMJZVf&terminal_id=404226348af640d894c68bcc06778bd1&afSmartRedirect=y&gatewayAdapt=glo2usa"> Link </a> |
 | Batteries | Used to power the safe | $14.89 | <a href="https://www.amazon.com/Coppertop-Batteries-Ingredients-Long-lasting-Household/dp/B002UXRXE6/ref=asc_df_B002UXRXE6/?tag=hyprod-20&linkCode=df0&hvadid=693464962511&hvpos=&hvnetw=g&hvrand=17727216277919997895&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032171&hvtargid=pla-638867480103&psc=1&mcid=c945774d225c355481b304e5f5b0a960&gad_source=1"> Link </a> |
 
-<!---
+
 # Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
+<!--- One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components. -->
+- [Example 1](https://rushabh-taneja.github.io/blue_stamp_engineering/)
+- [Example 2](https://learn.adafruit.com/biometric-security-box/program-and-test)
+- [Example 3](https://www.hackster.io/Hack-star-Arduino/learn-to-use-lcd-1602-i2c-parallel-with-arduino-uno-f73f07)
 
 To watch the BSE tutorial on how to create a portfolio, click here.
--->
+
 # Starter Project
 <iframe width="560" height="315" src="https://www.youtube.com/embed/f4P4u2elmVI?si=ZLH9Rz3OYL4tvI35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
