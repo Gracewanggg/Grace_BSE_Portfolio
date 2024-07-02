@@ -24,16 +24,13 @@ For your final milestone, explain the outcome of your project. Key details to in
 - What you hope to learn in the future after everything you've learned at BSE
 
 
-
+-->
 # Second Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-lhDAlV7QI4?si=5ZCQV8xxpAzb_-GX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone -->
+For my second milestone, I finished up the "guts" of my safe by doing all of the all of the wiring and coding for all of the components that I planned on using (servo, LCD display, fingerprint scanner, button, on-off switch, keypad). I wired them using jumper wires to a breadboard and the arduino. In Arduino IDE, I used a bunch of if statements and installed the libraries needed to use my componenets to create the locking code. I used the soldering iron to connect wires to create extensions and attach solid core wire so that I could insert it into the breadboard without individual wire strands breaking inside and messing things up. Some challenges that I faced were the button and on-off switch. At first,the button would give the wrong data and take a long amount of time to change its output after being pressed. To fix this, I removed the delay that I added after it and it was able to give correct data with minimum lag. For the on-off switch, I messed up the solder joints connecting the battery and the switch, preventing the rest of the circuit from recieving enough voltage. To fix this, I redid all of the solder joints, fixing the issue. To complete my final milestone, I need to package all of the components that I have wired up and coded into the box.
+
 
 # First Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wYVMw6ThgyI?si=PYWWjNdsai_RXagc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -78,9 +75,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 # Other Resources/Examples
 <!--- One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components. -->
-- [Example 1](https://rushabh-taneja.github.io/blue_stamp_engineering/)
-- [Example 2](https://learn.adafruit.com/biometric-security-box/program-and-test)
-- [Example 3](https://www.hackster.io/Hack-star-Arduino/learn-to-use-lcd-1602-i2c-parallel-with-arduino-uno-f73f07)
+- [Rushabh's portfolio](https://rushabh-taneja.github.io/blue_stamp_engineering/)
+- [Adafruit Biometric Security Box](https://learn.adafruit.com/biometric-security-box/program-and-test)
+- [Hackster LCD display](https://www.hackster.io/Hack-star-Arduino/learn-to-use-lcd-1602-i2c-parallel-with-arduino-uno-f73f07)
 
 <!--- To watch the BSE tutorial on how to create a portfolio, click here.-->
 
