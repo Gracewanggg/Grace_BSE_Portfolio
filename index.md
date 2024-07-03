@@ -40,23 +40,261 @@ For my first milestone, I wired up the keypad and servo onto the arduino. I used
 <!---
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
-
+-->
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
+#include <Servo.h>
+#include <Keypad.h>
+#include <Adafruit_Fingerprint.h>
+#include <LiquidCrystal_I2C.h>
+
+Servo myServo;
+int pos = 0;
+String input = "";
+String password = "1234";
+int attempts;
+long StartTime = 0;
+uint8_t id;
+
+int button = digitalRead(5);
+
+const byte ROWS = 4;  //four rows
+const byte COLS = 3;  //three columns
+char keys[ROWS][COLS] = {
+  { '1', '2', '3' },
+  { '4', '5', '6' },
+  { '7', '8', '9' },
+  { '*', '0', '#' }
+};
+byte rowPins[ROWS] = { 10, 11, 12, 13 };  //connect to the row pinouts of the keypad
+byte colPins[COLS] = { 7, 8, 9 };         //connect to the column pinouts of the keypad
+
+//Create an object of keypad
+Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+
+// Define a Fingerprint sensor on pins 3 & 4
+SoftwareSerial mySerial(4, 3);
+Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
+
+//create a liquid crystal object for lcd screen
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  Serial.println("Hello World!");
+  myServo.attach(2);  // attaches the servo on pin 2 to the servo object
+  myServo.write(pos);
+
+  lcd.init();
+  lcd.backlight();
+
+  attempts = 5;
+  //lock button stuff
+  pinMode(5, INPUT);
+
+  Serial.println("Please put in the correct password. Press # when done");
+  lcd.setCursor(1,0);
+  lcd.print("Please enter the");
+  lcd.setCursor(1, 1);
+  lcd.print("correct password");
+  lcd.setCursor(1, 2);
+  lcd.print("Press # to enter");
+
+  finger.begin(57600);
+  // Connect to the sensor
+  if (finger.verifyPassword()) {
+    Serial.println("Found fingerprint sensor!");
+  } else {
+    Serial.println("Did not find fingerprint sensor :(");
+    while (1);
+  }
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  char key = keypad.getKey();  //return key number
+  if (key == '*') {
+    input = "";
+    Serial.println("Cleared");
+    lcd.clear();
+    lcd.print("Cleared");
+  } else if (key) {
+    if (input.length() == 4) {
+      if (password.equals(input)) {
+        lcd.clear();
+        Serial.println("Correct! Please scan your finger now");
+        lcd.setCursor(1,0);
+        lcd.print("Correct!");
+        lcd.setCursor(1, 1);
+        lcd.print("Scan finger now");
 
+        finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_ON, 0, FINGERPRINT_LED_PURPLE);
+        input = "";
+        delay(3000);
+        int fID = getFingerprintID();
+        if (fID > 0) {
+          Serial.println("Fingerprint Identified");
+          lcd.clear();
+          lcd.setCursor(4, 1);
+          lcd.print("Fingerprint");
+          lcd.setCursor(4, 2);
+          lcd.print("Identified!");
+          delay(2000);
+          lcd.clear();
+          lcd.setCursor(2, 1);
+          lcd.print("Will now unlock");
+          moveLock();
+            
+          lcd.clear();
+          lcd.setCursor(1, 0);
+          lcd.print("Press red button");
+          lcd.setCursor(1,1);
+          lcd.print("to lock the box");
+          //delay(5*60*1000);
+          delay(1000);
+          int current = millis();
+          for(int i = current; i < current + 5000; i++){
+            button = digitalRead(5);
+            Serial.println(button);   
+            if(button == HIGH){
+              lcd.clear();
+              lcd.print("Locking");
+              moveLock();
+              break;
+           }
+          }
+        }
+        else if (fID == -2){
+          Serial.println("Unknown fingerprint. Access Denied :[");
+          lcd.clear();
+          lcd.setCursor(1, 0);
+          lcd.print("Unknown fingerprint");
+          lcd.setCursor(1, 1);
+          lcd.print("Access Denied :[");
+          finger.LEDcontrol(FINGERPRINT_LED_BREATHING, 10, FINGERPRINT_LED_RED);
+          delay(2000);
+          finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_OFF, 0, FINGERPRINT_LED_RED);
+        }
+        else { 
+          Serial.println("Fingerprint not found. Please input password again.");
+          lcd.clear();
+          lcd.setCursor(0, 0);
+          lcd.print("Fingerprint not seen");
+          lcd.setCursor(1, 1);
+          lcd.print("Re-input password");
+          finger.LEDcontrol(FINGERPRINT_LED_BREATHING, 10, FINGERPRINT_LED_PURPLE);
+          delay(2000);
+          finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_OFF, 0, FINGERPRINT_LED_PURPLE);
+        }
+      }
+      else {
+        Serial.println("Incorrect! Try again");
+        lcd.clear();
+        lcd.print("Incorrect!");
+        input = "";
+        finger.LEDcontrol(FINGERPRINT_LED_BREATHING, 10, FINGERPRINT_LED_RED);
+        delay(2000);
+        finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_OFF, 0, FINGERPRINT_LED_RED);
+      }
+    } else {
+      input += key;
+      Serial.println(input);
+      delay(50);
+      lcd.clear();
+      lcd.print(input);
+    }
+  }
+}
+
+void moveLock(){
+  Serial.println("Lock moving");
+  finger.LEDcontrol(FINGERPRINT_LED_BREATHING, 10, FINGERPRINT_LED_BLUE);
+  delay(2000);
+  finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_OFF, 0, FINGERPRINT_LED_BLUE);
+  if (pos == 0) {
+    for (pos = 0; pos < 90; pos += 3) {  // goes from 0 degrees to 180 degrees
+      // in steps of 1 degree
+      myServo.write(pos);  // tell servo to go to position in variable 'pos'
+      delay(15);           // waits 15ms for the servo to reach the position
+    }
+  } else if (pos == 90) {
+    for (pos = 90; pos > 0; pos -= 3) {  // goes from 0 degrees to 180 degrees
+      // in steps of 1 degree
+      myServo.write(pos);  // tell servo to go to position in variable 'pos'
+      delay(15);           // waits 15ms for the servo to reach the position
+    }
+  }
+}
+
+//returns the ID of the matching fingerprint or prints the error
+int getFingerprintID() {
+  uint8_t p = finger.getImage();
+  switch (p) {
+    case FINGERPRINT_OK:
+      Serial.println("Image taken");
+      break;
+    case FINGERPRINT_NOFINGER:
+      Serial.println("No finger detected");
+      return -1;
+    case FINGERPRINT_PACKETRECIEVEERR:
+      Serial.println("Communication error");
+      return -1;
+    case FINGERPRINT_IMAGEFAIL:
+      Serial.println("Imaging error");
+      return -1;
+    default:
+      Serial.println("Unknown error");
+      return -1;
+  }
+
+  // OK success!
+  p = finger.image2Tz();
+  switch (p) {
+    case FINGERPRINT_OK:
+      Serial.println("Image converted");
+      break;
+    case FINGERPRINT_IMAGEMESS:
+      Serial.println("Image too messy");
+      return -1;
+    case FINGERPRINT_PACKETRECIEVEERR:
+      Serial.println("Communication error");
+      return -1;
+    case FINGERPRINT_FEATUREFAIL:
+      Serial.println("Could not find fingerprint features");
+      return -1;
+    case FINGERPRINT_INVALIDIMAGE:
+      Serial.println("Could not find fingerprint features");
+      return -1;
+    default:
+      Serial.println("Unknown error");
+      return -1;
+  }
+
+  // OK converted!
+  p = finger.fingerSearch();
+  if (p == FINGERPRINT_OK) {
+    Serial.println("Found a print match!");
+  } else if (p == FINGERPRINT_PACKETRECIEVEERR) {
+    Serial.println("Communication error");
+    return -1;
+  } else if (p == FINGERPRINT_NOTFOUND) {
+    Serial.println("Did not find a match");
+    return -2;
+  } else {
+    Serial.println("Unknown error");
+    return -1;
+  }
+
+  // found a match!
+  Serial.print("Found ID #");
+  Serial.print(finger.fingerID);
+  Serial.print(" with confidence of ");
+  Serial.println(finger.confidence);
+  return finger.fingerID;
 }
 ```
--->
 # Bill of Materials
 <!--- Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. -->
