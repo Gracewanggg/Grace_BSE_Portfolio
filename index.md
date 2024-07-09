@@ -42,7 +42,7 @@ For my first milestone, I wired up the keypad and servo onto the arduino. I used
 Keypad Wiring (credit: Adafruit Learning Center)
 <br>
 
-![Keypad Wiring Image](keypadWiring.png)
+![Keypad Wiring Image](testing.png)
 
 <br>
 Button Wiring (credit: The Chewett blog)
