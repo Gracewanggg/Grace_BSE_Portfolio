@@ -37,7 +37,7 @@ For my second milestone, I finished up the "guts" of my safe by doing all of the
 
 For my first milestone, I wired up the keypad and servo onto the arduino. I used C++ in Arduino IDE on my computer to upload code. I mapped the button "1" to make the servo move 180 degrees clockwise and "2" to make the servo move 180 degrees counterclockwise so that the servo would spin accordingly when the respective buttons on the keypad were pressed. I also made the computer print out the value of whatever button I pressed. Some challeges that I faced were how much the arduino could handle. At first, I had the servo just constantly spinning, which made the keypad stop working whenever the servo was active. It also kept forcing my computer to shut down. To fix this, I added a battery pack to provide more power so that the arduino wouldn't have to only draw power from the computer and made the servo only spin a set amount when a button was clicked.
 
-<!---
+
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
 Keypad Wiring (credit: Adafruit Learning Center)
@@ -46,12 +46,17 @@ Keypad Wiring (credit: Adafruit Learning Center)
 <br>
 Button Wiring (credit: The Chewett blog)
 <br>
+![Button Wiring Image](buttonWiring.png)
+<br>
 LCD Display Wiring (credit: Makerguides)
+<br>
+![LCD Display Wiring Image](lcdWiring.png)
 <br>
 Servo Wiring (credit: Build Electronic Circuits)
 <br>
+![Servo Wiring Image](servoWiring.png)
+<br>
 
--->
 # CAD
 Front View
 <br>
