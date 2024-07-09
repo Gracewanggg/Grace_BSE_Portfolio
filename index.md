@@ -40,23 +40,21 @@ For my first milestone, I wired up the keypad and servo onto the arduino. I used
 
 # Schematics 
 Keypad Wiring (credit: Adafruit Learning Center)
-<br>
 
-![Keypad Wiring Image](testing.png)
+![Keypad Wiring Image](keypadWiring.png)
 
-<br>
 Button Wiring (credit: The Chewett blog)
-<br>
+
 ![Button Wiring Image](buttonWiring.png)
-<br>
+
 LCD Display Wiring (credit: Makerguides)
-<br>
+
 ![LCD Display Wiring Image](lcdWiring.png)
-<br>
+
 Servo Wiring (credit: Build Electronic Circuits)
-<br>
+
 ![Servo Wiring Image](servoWiring.png)
-<br>
+
 
 # CAD
 Front View
