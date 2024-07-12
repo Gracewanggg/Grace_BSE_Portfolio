@@ -10,7 +10,7 @@ My project is a keypad and fingerprint ID safe. The box has a keypad and fingerp
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.** 
 
 ![Headstone Image](logo.svg)
-
+-->
 # Final Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s2chDWI1hzg?si=o6awmSPj3lgRzjfN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -18,15 +18,8 @@ My project is a keypad and fingerprint ID safe. The box has a keypad and fingerp
 For my final milestone, I packaged all of the components that I had wired up and coded in the previous milestone into the box and added a locking mechanism to make it a functional safe. To have the lcd display, keypad, scanner, and buttons accessible, I cut openings in the box and used screws to mount them in place. I also CAD-ed a 3D printed mount for the servo so that I could mount it to the side more securely. 
 One of the biggest challenges that I faced when doing this was figuring out the spacing of all of the components so that I could fit everthing neatly inside of the box while still having room to put other things inside of the box. To solve this, I created a CAD of the box and all of the components to figure out the spacing. In this CAD, I decided to use a fake wall to mount the Arduino, breadboard, and battery. The wires also took up a lot of room and got very tangled and confusing so I used tape and zipties to group them based on function and mount them to the sides of the box to make it neater. 
 One other challenge that I faced was the strength of the locking mechanism. I started out making it from cardboard but it broke really easily. To address that I remade it using a 3D printed part but that also broke after a few uses. Finally, I attached a metal gusset which hasn't broken yet.
-Some key topics that I learned from this project have been 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+Some key topics that I learned from this project have been how to code sensors and mechanisms using Arduino IDE, some basic electrical, fabrication using tools like the dremel, and CAD. In the future, I hope to learn more about mechanical design and electronics and add on the nerf gun modification that I ran out of time for here. 
 
-
--->
 # Second Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-lhDAlV7QI4?si=5ZCQV8xxpAzb_-GX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
