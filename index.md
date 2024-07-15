@@ -17,8 +17,8 @@ My project is a keypad and fingerprint ID safe. The box has a keypad and fingerp
 
 For my final milestone, I packaged all of the components that I had wired up and coded in the previous milestone into the box and added a locking mechanism to make it a functional safe. To have the lcd display, keypad, scanner, and buttons accessible, I cut openings in the box and used screws to mount them in place. I also CAD-ed a 3D printed mount for the servo so that I could mount it to the side more securely. 
 One of the biggest challenges that I faced when doing this was figuring out the spacing of all of the components so that I could fit everthing neatly inside of the box while still having room to put other things inside of the box. To solve this, I created a CAD of the box and all of the components to figure out the spacing. In this CAD, I decided to use a fake wall to mount the Arduino, breadboard, and battery. The wires also took up a lot of room and got very tangled and confusing so I used tape and zipties to group them based on function and mount them to the sides of the box to make it neater. 
-One other challenge that I faced was the strength of the locking mechanism. I started out making it from cardboard but it broke really easily. To address that I remade it using a 3D printed part but that also broke after a few uses. Finally, I attached a metal gusset which hasn't broken yet.
-Some key topics that I learned from this project have been how to code sensors and mechanisms using Arduino IDE, some basic electrical, fabrication using tools like the dremel, and CAD. In the future, I hope to learn more about mechanical design and electronics and add on the nerf gun modification that I ran out of time for here. 
+One other challenge that I faced was the strength of the locking mechanism. I started out making it from cardboard but it broke really easily. To address that I remade it using a 3D printed part but that also broke after a few uses. Finally, I attached a metal gusset to increase the durability of the locking mechanism.
+Some key topics that I learned from this project have been how to code sensors and mechanisms using Arduino IDE, some basic electrical, fabrication using tools like the dremel, and CAD. In the future, I hope to learn more about mechanical design, specifically CAD, and electronics and add on the nerf gun modification that I ran out of time for here. 
 
 # Second Milestone
 
@@ -30,7 +30,7 @@ For my second milestone, I finished up the "guts" of my safe by doing all of the
 # First Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wYVMw6ThgyI?si=PYWWjNdsai_RXagc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my first milestone, I wired up the keypad and servo onto the arduino. I used C++ in Arduino IDE on my computer to upload code. I mapped the button "1" to make the servo move 180 degrees clockwise and "2" to make the servo move 180 degrees counterclockwise so that the servo would spin accordingly when the respective buttons on the keypad were pressed. I also made the computer print out the value of whatever button I pressed. Some challeges that I faced were how much the arduino could handle. At first, I had the servo just constantly spinning, which made the keypad stop working whenever the servo was active. It also kept forcing my computer to shut down. To fix this, I added a battery pack to provide more power so that the arduino wouldn't have to only draw power from the computer and made the servo only spin a set amount when a button was clicked.
+For my first milestone, I wired up the keypad and servo onto the arduino. I Arduino IDE on my computer to upload code. I mapped the button "1" to make the servo move 180 degrees clockwise and "2" to make the servo move 180 degrees counterclockwise so that the servo would spin accordingly when the respective buttons on the keypad were pressed. I also made the computer print out the value of whatever button I pressed. Some challeges that I faced were how much the arduino could handle. At first, I had the servo just constantly spinning, which made the keypad stop working whenever the servo was active. It also kept forcing my computer to shut down. To fix this, I added a battery pack to provide more power so that the arduino wouldn't have to only draw power from the computer and made the servo only spin a set amount when a button was clicked.
 
 
 # Schematics 
@@ -77,12 +77,12 @@ Servo myServo;
 int pos = 0;
 String input = "";
 String password = "1234";
-int attempts;
-long StartTime = 0;
-uint8_t id;
+int attempts = 0;
+const int buzzer = 6;
 
 int button = digitalRead(5);
 
+//keypad button mapping
 const byte ROWS = 4;  //four rows
 const byte COLS = 3;  //three columns
 char keys[ROWS][COLS] = {
@@ -105,28 +105,25 @@ Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
+
   myServo.attach(2);  // attaches the servo on pin 2 to the servo object
   myServo.write(pos);
-
+  
+  //lcd stuff
   lcd.init();
   lcd.backlight();
 
-  attempts = 5;
   //lock button stuff
   pinMode(5, INPUT);
 
-  Serial.println("Please put in the correct password. Press # when done");
-  lcd.setCursor(1,0);
-  lcd.print("Please enter the");
-  lcd.setCursor(1, 1);
-  lcd.print("correct password");
-  lcd.setCursor(1, 2);
-  lcd.print("Press # to enter");
+  //buzzer on pin 6
+  pinMode(buzzer, OUTPUT);
+  
+  intro();
 
-  finger.begin(57600);
   // Connect to the sensor
+  finger.begin(57600);
   if (finger.verifyPassword()) {
     Serial.println("Found fingerprint sensor!");
   } else {
@@ -136,7 +133,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   char key = keypad.getKey();  //return key number
   if (key == '*') {
     input = "";
@@ -155,7 +151,7 @@ void loop() {
 
         finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_ON, 0, FINGERPRINT_LED_PURPLE);
         input = "";
-        delay(3000);
+        delay(4000);
         int fID = getFingerprintID();
         if (fID > 0) {
           Serial.println("Fingerprint Identified");
@@ -168,14 +164,13 @@ void loop() {
           lcd.clear();
           lcd.setCursor(2, 1);
           lcd.print("Will now unlock");
-          moveLock();
+          moveLock(false);
             
           lcd.clear();
           lcd.setCursor(1, 0);
           lcd.print("Press red button");
           lcd.setCursor(1,1);
           lcd.print("to lock the box");
-          //delay(5*60*1000);
           delay(1000);
           int current = millis();
           for(int i = current; i < current + 5000; i++){
@@ -184,10 +179,13 @@ void loop() {
             if(button == HIGH){
               lcd.clear();
               lcd.print("Locking");
-              moveLock();
+              moveLock(true);
               break;
-           }
+            }
           }
+
+          delay(1000);
+          intro();
         }
         else if (fID == -2){
           Serial.println("Unknown fingerprint. Access Denied :[");
@@ -196,6 +194,7 @@ void loop() {
           lcd.print("Unknown fingerprint");
           lcd.setCursor(1, 1);
           lcd.print("Access Denied :[");
+
           finger.LEDcontrol(FINGERPRINT_LED_BREATHING, 10, FINGERPRINT_LED_RED);
           delay(2000);
           finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_OFF, 0, FINGERPRINT_LED_RED);
@@ -207,6 +206,7 @@ void loop() {
           lcd.print("Fingerprint not seen");
           lcd.setCursor(1, 1);
           lcd.print("Re-input password");
+          
           finger.LEDcontrol(FINGERPRINT_LED_BREATHING, 10, FINGERPRINT_LED_PURPLE);
           delay(2000);
           finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_OFF, 0, FINGERPRINT_LED_PURPLE);
@@ -215,11 +215,33 @@ void loop() {
       else {
         Serial.println("Incorrect! Try again");
         lcd.clear();
+        lcd.setCursor(0, 0);
         lcd.print("Incorrect!");
+        lcd.setCursor(1, 1);
+
+        attempts++;
+        int left = 5 - attempts;
+        lcd.print(left);
+        lcd.print(" attempts left");
+
         input = "";
         finger.LEDcontrol(FINGERPRINT_LED_BREATHING, 10, FINGERPRINT_LED_RED);
         delay(2000);
         finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_OFF, 0, FINGERPRINT_LED_RED);
+
+        if(attempts == 5){
+          int current = millis();
+          for(int i = current; i < current + 10; i++){
+            Serial.println(i);
+            lcd.clear();
+            lcd.print("Thief! Go away >:<");
+            tone(buzzer, 4000); // Send 1KHz sound signal...
+            delay(1000);        // ...for 1 sec
+            noTone(buzzer);     // Stop sound...
+            delay(1000);        // ...for 1sec
+          }
+          noTone(buzzer);
+        }
       }
     } else {
       input += key;
@@ -231,18 +253,29 @@ void loop() {
   }
 }
 
-void moveLock(){
+void intro(){
+  lcd.clear();
+  Serial.println("Please put in the correct password. Press # when done");
+  lcd.setCursor(1,0);
+  lcd.print("Please enter the");
+  lcd.setCursor(1, 1);
+  lcd.print("correct password");
+  lcd.setCursor(1, 2);
+  lcd.print("Press # to enter");
+}
+
+void moveLock(boolean lock){
   Serial.println("Lock moving");
   finger.LEDcontrol(FINGERPRINT_LED_BREATHING, 10, FINGERPRINT_LED_BLUE);
   delay(2000);
   finger.LEDcontrol(FINGERPRINT_LED_GRADUAL_OFF, 0, FINGERPRINT_LED_BLUE);
-  if (pos == 0) {
+
+  if (lock == false) {
     for (pos = 0; pos < 90; pos += 3) {  // goes from 0 degrees to 180 degrees
-      // in steps of 1 degree
       myServo.write(pos);  // tell servo to go to position in variable 'pos'
       delay(15);           // waits 15ms for the servo to reach the position
     }
-  } else if (pos == 90) {
+  } else if (lock == true) {
     for (pos = 90; pos > 0; pos -= 3) {  // goes from 0 degrees to 180 degrees
       // in steps of 1 degree
       myServo.write(pos);  // tell servo to go to position in variable 'pos'
