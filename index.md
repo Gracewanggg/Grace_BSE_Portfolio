@@ -20,19 +20,20 @@ One other challenge that I faced was the strength of the locking mechanism. I st
 Some key topics that I learned from this project have been how to code sensors and mechanisms using Arduino IDE, some basic electrical, fabrication using tools like the dremel, and CAD. In the future, I hope to learn more about mechanical design, specifically CAD, and electronics and add on the nerf gun modification that I ran out of time for here. 
 
 # CAD
-Front View
+Figure #1 - Front View
 <br>
 ![Front View Image](frontView.png)
 <br>
-Inside View
+Figure #2 - Inside View
 <br>
 ![Inside View Image](insideView.png)
 <br>
-Locking Mechanism
+Figure #3 - Locking Mechanism
 <br>
 ![Locking Mechanism Image](lockingMechanism.png)
 
 # Flowchart
+Figure #4 - Flowchart
 ![Flowchart Image](Flowchart.png)
 
 # Code
@@ -330,19 +331,19 @@ int getFingerprintID() {
 For my second milestone, I finished up the "guts" of my safe by doing all of the all of the wiring and coding for all of the components that I planned on using (servo, LCD display, fingerprint scanner, button, on-off switch, keypad). I wired them using jumper wires to a breadboard and the arduino. In Arduino IDE, I used a bunch of if statements and installed the libraries needed to use my componenets to create the locking code. I used the soldering iron to connect wires to create extensions and attach solid core wire so that I could insert it into the breadboard without individual wire strands breaking inside and messing things up. Some challenges that I faced were the button and on-off switch. At first,the button would give the wrong data and take a long amount of time to change its output after being pressed. To fix this, I removed the delay that I added after it and it was able to give correct data with minimum lag. For the on-off switch, I messed up the solder joints connecting the battery and the switch, preventing the rest of the circuit from recieving enough voltage. To fix this, I redid all of the solder joints, fixing the issue. To complete my final milestone, I need to package all of the components that I have wired up and coded into the box.
 
 # Schematics 
-Keypad Wiring (credit: Adafruit Learning Center)
+Figure #5 - Keypad Wiring (credit: Adafruit Learning Center)
 
 ![Keypad Wiring Image](keypadWiring.png)
 
-Button Wiring (credit: The Chewett blog)
+Figure #6 - Button Wiring (credit: The Chewett blog)
 
 ![Button Wiring Image](buttonWiring.png)
 
-LCD Display Wiring (credit: Makerguides)
+Figure #7 - LCD Display Wiring (credit: Makerguides)
 
 ![LCD Display Wiring Image](lcdWiring.png)
 
-Servo Wiring (credit: Build Electronic Circuits)
+Figure #8 - Servo Wiring (credit: Build Electronic Circuits)
 
 ![Servo Wiring Image](servoWiring.png)
 
