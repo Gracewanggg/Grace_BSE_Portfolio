@@ -12,41 +12,10 @@ My project is a keypad and fingerprint ID safe. The box has a keypad and fingerp
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s2chDWI1hzg?si=o6awmSPj3lgRzjfN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my final milestone, I packaged all of the components that I had wired up and coded in the previous milestone into the box and added a locking mechanism to make it a functional safe. To have the lcd display, keypad, scanner, and buttons accessible, I cut openings in the box and used screws to mount them in place. I also CAD-ed a 3D printed mount for the servo so that I could mount it to the side more securely. 
+For my final milestone, I packaged all of the components that I had wired up and coded in the previous milestone into the box and added a locking mechanism to make it a functional safe. To have the lcd display, keypad, scanner, and buttons accessible, I cut openings in the box and used screws to mount them in place. I also CAD-ed a 3D printed mount for the servo so that I could mount it to the side more securely. <br>
 One of the biggest challenges that I faced when doing this was figuring out the spacing of all of the components so that I could fit everthing neatly inside of the box while still having room to put other things inside of the box. To solve this, I created a CAD of the box and all of the components to figure out the spacing. In this CAD, I decided to use a fake wall to mount the Arduino, breadboard, and battery. The wires also took up a lot of room and got very tangled and confusing so I used tape and zipties to group them based on function and mount them to the sides of the box to make it neater. 
-One other challenge that I faced was the strength of the locking mechanism. I started out making it from cardboard but it broke really easily. To address that I remade it using a 3D printed part but that also broke after a few uses. Finally, I attached a metal gusset to increase the durability of the locking mechanism.
+One other challenge that I faced was the strength of the locking mechanism. I started out making it from cardboard but it broke really easily. To address that I remade it using a 3D printed part but that also broke after a few uses. Finally, I attached a metal gusset to increase the durability of the locking mechanism. <br>
 Some key topics that I learned from this project have been how to code sensors and mechanisms using Arduino IDE, some basic electrical, fabrication using tools like the dremel, and CAD. In the future, I hope to learn more about mechanical design, specifically CAD, and electronics and add on the nerf gun modification that I ran out of time for here. 
-
-# Second Milestone
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-lhDAlV7QI4?si=5ZCQV8xxpAzb_-GX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-For my second milestone, I finished up the "guts" of my safe by doing all of the all of the wiring and coding for all of the components that I planned on using (servo, LCD display, fingerprint scanner, button, on-off switch, keypad). I wired them using jumper wires to a breadboard and the arduino. In Arduino IDE, I used a bunch of if statements and installed the libraries needed to use my componenets to create the locking code. I used the soldering iron to connect wires to create extensions and attach solid core wire so that I could insert it into the breadboard without individual wire strands breaking inside and messing things up. Some challenges that I faced were the button and on-off switch. At first,the button would give the wrong data and take a long amount of time to change its output after being pressed. To fix this, I removed the delay that I added after it and it was able to give correct data with minimum lag. For the on-off switch, I messed up the solder joints connecting the battery and the switch, preventing the rest of the circuit from recieving enough voltage. To fix this, I redid all of the solder joints, fixing the issue. To complete my final milestone, I need to package all of the components that I have wired up and coded into the box.
-
-
-# First Milestone
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wYVMw6ThgyI?si=PYWWjNdsai_RXagc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-For my first milestone, I wired up the keypad and servo onto the arduino. I Arduino IDE on my computer to upload code. I mapped the button "1" to make the servo move 180 degrees clockwise and "2" to make the servo move 180 degrees counterclockwise so that the servo would spin accordingly when the respective buttons on the keypad were pressed. I also made the computer print out the value of whatever button I pressed. Some challeges that I faced were how much the arduino could handle. At first, I had the servo just constantly spinning, which made the keypad stop working whenever the servo was active. It also kept forcing my computer to shut down. To fix this, I added a battery pack to provide more power so that the arduino wouldn't have to only draw power from the computer and made the servo only spin a set amount when a button was clicked.
-
-
-# Schematics 
-Keypad Wiring (credit: Adafruit Learning Center)
-
-![Keypad Wiring Image](keypadWiring.png)
-
-Button Wiring (credit: The Chewett blog)
-
-![Button Wiring Image](buttonWiring.png)
-
-LCD Display Wiring (credit: Makerguides)
-
-![LCD Display Wiring Image](lcdWiring.png)
-
-Servo Wiring (credit: Build Electronic Circuits)
-
-![Servo Wiring Image](servoWiring.png)
-
 
 # CAD
 Front View
@@ -348,6 +317,34 @@ int getFingerprintID() {
   return finger.fingerID;
 }
 ```
+
+# Second Milestone
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-lhDAlV7QI4?si=5ZCQV8xxpAzb_-GX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+For my second milestone, I finished up the "guts" of my safe by doing all of the all of the wiring and coding for all of the components that I planned on using (servo, LCD display, fingerprint scanner, button, on-off switch, keypad). I wired them using jumper wires to a breadboard and the arduino. In Arduino IDE, I used a bunch of if statements and installed the libraries needed to use my componenets to create the locking code. I used the soldering iron to connect wires to create extensions and attach solid core wire so that I could insert it into the breadboard without individual wire strands breaking inside and messing things up. Some challenges that I faced were the button and on-off switch. At first,the button would give the wrong data and take a long amount of time to change its output after being pressed. To fix this, I removed the delay that I added after it and it was able to give correct data with minimum lag. For the on-off switch, I messed up the solder joints connecting the battery and the switch, preventing the rest of the circuit from recieving enough voltage. To fix this, I redid all of the solder joints, fixing the issue. To complete my final milestone, I need to package all of the components that I have wired up and coded into the box.
+
+# Schematics 
+Keypad Wiring (credit: Adafruit Learning Center)
+
+![Keypad Wiring Image](keypadWiring.png)
+
+Button Wiring (credit: The Chewett blog)
+
+![Button Wiring Image](buttonWiring.png)
+
+LCD Display Wiring (credit: Makerguides)
+
+![LCD Display Wiring Image](lcdWiring.png)
+
+Servo Wiring (credit: Build Electronic Circuits)
+
+![Servo Wiring Image](servoWiring.png)
+
+# First Milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wYVMw6ThgyI?si=PYWWjNdsai_RXagc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+For my first milestone, I wired up the keypad and servo onto the arduino. I Arduino IDE on my computer to upload code. I mapped the button "1" to make the servo move 180 degrees clockwise and "2" to make the servo move 180 degrees counterclockwise so that the servo would spin accordingly when the respective buttons on the keypad were pressed. I also made the computer print out the value of whatever button I pressed. Some challeges that I faced were how much the arduino could handle. At first, I had the servo just constantly spinning, which made the keypad stop working whenever the servo was active. It also kept forcing my computer to shut down. To fix this, I added a battery pack to provide more power so that the arduino wouldn't have to only draw power from the computer and made the servo only spin a set amount when a button was clicked.
 
 # Bill of Materials
 <!--- Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
