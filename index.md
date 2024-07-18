@@ -6,8 +6,9 @@ My project is a keypad and fingerprint ID safe. The box has a keypad and fingerp
 |:--:|:--:|:--:|:--:|
 | Grace W | Prospect High School | Mechanincal Engineering | Incoming Senior | 
 
+<div align="center">
 ![Headstone Image](Headshot.png)
-
+</div>
 # Final Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/s2chDWI1hzg?si=o6awmSPj3lgRzjfN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
