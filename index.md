@@ -333,15 +333,19 @@ For my second milestone, I finished up the "guts" of my safe by doing all of the
 
 # Schematics 
 ![Keypad Wiring Image](keypadWiring.png)
+<br>
 **Figure #5 - Keypad Wiring (credit: Adafruit Learning Center)**
 
 ![Button Wiring Image](buttonWiring.png)
+<br>
 **Figure #6 - Button Wiring (credit: The Chewett blog)**
 
 ![LCD Display Wiring Image](lcdWiring.png)
+<br>
 **Figure #7 - LCD Display Wiring (credit: Makerguides)**
 
 ![Servo Wiring Image](servoWiring.png)
+<br>
 **Figure #8 - Servo Wiring (credit: Build Electronic Circuits)**
 
 # First Milestone
