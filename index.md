@@ -34,6 +34,7 @@ Some key topics that I learned from this project have been how to code sensors a
 
 # Flowchart
 ![Flowchart Image](Flowchart.png)
+<br>
 **Figure #4 - Flowchart**
 
 # Code
